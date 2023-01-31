@@ -38,9 +38,13 @@ class Mario : public Character{
 
 class Yoshi : public Character{
   public:
+    Yoshi(int crests);
+    Yoshi();
+    ~Yoshi();
     std::string whatAmI() const;
     void accelerate();
   private:
+    int* crests_;
 };
 
 #endif

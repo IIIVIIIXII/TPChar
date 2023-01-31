@@ -33,16 +33,33 @@ std::string Mario::whatAmI() const{
 }
 
 std::string Yoshi::whatAmI() const{
-  return "Yoshi";
+  std::string crest= std::to_string(*crests_);
+  return "Un Yoshi a "+crest+" crètes";
 }
 
 void Yoshi::accelerate(){
   if (speed_ < max_speed_-1){
-    speed_=speed_+2;
+    speed_=speed_+3;
   }
   else{
     if (speed_==max_speed_-1){
       speed_=max_speed_;
     }
   }
+}
+
+Yoshi::Yoshi(){
+  speed_=0;
+  max_speed_=10;
+  crests_= new int (3);
+}
+
+Yoshi::Yoshi(int crests){
+  speed_=0;
+  max_speed_=10;
+  crests_=new int (crests);
+}
+
+Yoshi::~Yoshi(){
+  delete crests_;
 }
