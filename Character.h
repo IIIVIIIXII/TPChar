@@ -9,6 +9,7 @@ class Character{
   float getMaxSpeed();//renvoie la vitesse max
   //Autres
   void accelerate();//augmente la vitesse de 1
+  void breaks();//réduit la vitesse de 1
 
 
   protected :
