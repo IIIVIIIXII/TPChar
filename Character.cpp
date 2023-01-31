@@ -21,3 +21,13 @@ float Character::getSpeed(){
 float Character::getMaxSpeed(){
   return max_speed_;
 }
+
+/*------------------------------
+        Autres
+------------------------------*/
+
+void Character::accelerate(){
+  if (speed_ < max_speed_){
+    speed_=speed_+1;
+  }
+}

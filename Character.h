@@ -4,9 +4,12 @@
 class Character{
   public :
   Character();// Constructeur par défaut
+  //Accesseurs
+  float getSpeed();//renvoie la vitesse
+  float getMaxSpeed();//renvoie la vitesse max
+  //Autres
+  void accelerate();//augmente la vitesse de 1
 
-  float getSpeed();
-  float getMaxSpeed();
 
   protected :
 
