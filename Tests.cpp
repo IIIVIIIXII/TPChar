@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include <array>
 #include <vector>
 #include "Character.h"
 
@@ -25,6 +24,7 @@ int main(){
   Yoshi yos,dino;
   Mario plumb, ewego,ahha;
   std::vector<Character*> participants = {&dino,&ahha,&yos,&plumb,&ewego};
+  std::cout<<"Course 1"<<std::endl;
   for (auto e:participants){
     e->accelerate();
     if (e->maxSpeed()==10){
@@ -32,6 +32,19 @@ int main(){
       break;
     }
 	}
+
+  Yoshi yos1,dino1;
+  Mario plumb1, ewego1,ahha1;
+  std::vector<Character*> participants1 = {&dino1,&ahha1,&yos1,&plumb1,&ewego1};
+  std::cout<<"Course 2"<<std::endl;
+  for (auto vIter = std::begin(participants1); vIter != std::end(participants1); ++vIter){
+    (*vIter)->accelerate();
+    if ((*vIter)->maxSpeed()==10){
+      std::cout<<(*vIter)->whatAmI()<<" a gagné !"<<std::endl;
+      break;
+    }
+	}
+
   Yoshi yosh = Yoshi(5);
   std::cout<<yosh.whatAmI()<<std::endl;
 }
