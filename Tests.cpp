@@ -2,5 +2,6 @@
 #include "Character.h"
 
 int main(){
-  std::cout<<"Hello World"<<std::endl;
+  Character mario = Character();
+  std::cout<<"Vitesse : "<<mario.getSpeed()<<" Vitesse max : "<< mario.getMaxSpeed()<<std::endl;
 }
